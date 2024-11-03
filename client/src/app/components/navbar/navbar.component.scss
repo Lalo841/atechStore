@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+nav {
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 0.5px solid rgb(221, 219, 219);
+  width: 100%;
+}
+.company-logo {
+  width: 17%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  .company-logo__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h1 {
+      font-size: 18px;
+      font-family: "Nunito", sans-serif;
+      font-weight: 900;
+    }
+    p {
+      font-size: 14px;
+      font-family: "Nunito", sans-serif;
+      color: rgb(165, 165, 165);
+    }
+  }
+}
+.search-bar {
+ width: 63%;
+}
+
+.sign-in-container {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  .sign-in-container__sign-btn {
+    font-size: 16px;
+    color: #0077fe;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #0077fe;
+    border-radius: 16px;
+    height: 100%;
+    padding: 8px 18px;
+  }
+
+  .sign-in-container__cart-btn {
+    color: #0077fe;
+    display: flex;
+    align-items: center;
+    border: 1px solid #0077fe;
+    border-radius: 16px;
+    height: 100%;
+    padding: 8px 18px;
+  }
+}

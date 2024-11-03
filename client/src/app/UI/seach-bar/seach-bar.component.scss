@@ -1,0 +1,20 @@
+.input-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  padding: 0px 10px;
+  background-color: rgb(246, 246, 246);
+  height: 100%;
+
+  input {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+  }
+
+  input::placeholder {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+  }
+}
