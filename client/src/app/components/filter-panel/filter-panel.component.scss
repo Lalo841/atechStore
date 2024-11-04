@@ -1,0 +1,25 @@
+.filter-panel {
+  .filter-panel__list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+
+.active {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #008cfe;
+  box-shadow: 0px 4px 6px rgb(202, 202, 202);
+}
+
+.non-active {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}

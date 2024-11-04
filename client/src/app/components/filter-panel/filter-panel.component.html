@@ -1,0 +1,10 @@
+<div class="filter-panel">
+  <div class="filter-panel__list">
+    <app-filter-item
+      (click)="onClickHandler(item, i)"
+      *ngFor="let item of filterItems; let i = index"
+      [ngClass]="{ active: activeBtnIndex === i, 'non-active': activeBtnIndex !== i}"
+      [btnText]="item"
+    ></app-filter-item>
+  </div>
+</div>
