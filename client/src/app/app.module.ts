@@ -8,9 +8,10 @@ import { SeachBarComponent } from './UI/seach-bar/seach-bar.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
 import { SideFilterPanelComponent } from './components/side-filter-panel/side-filter-panel.component';
-import { PruductListComponent } from './components/pruduct-list/pruduct-list.component';
-import { ProductComponent } from './components/product/product.component';
+
 import { FilterItemComponent } from './components/filter-item/filter-item.component';
+import { ProductCardCatalogComponent } from './components/product-card-catalog/product-card-catalog.component';
+import { ListProductCardCatalogComponent } from './components/list-product-card-catalog/list-product-card-catalog.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,9 @@ import { FilterItemComponent } from './components/filter-item/filter-item.compon
     ProductPageComponent,
     FilterPanelComponent,
     SideFilterPanelComponent,
-    PruductListComponent,
-    ProductComponent,
-    FilterItemComponent
+    FilterItemComponent,
+    ProductCardCatalogComponent,
+    ListProductCardCatalogComponent
   ],
   imports: [
     BrowserModule,
