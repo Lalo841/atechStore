@@ -7,9 +7,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SeachBarComponent } from './UI/seach-bar/seach-bar.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
+import { FilterItemComponent } from './components/filter-item/filter-item.component';
 import { SideFilterPanelComponent } from './components/side-filter-panel/side-filter-panel.component';
 
-import { FilterItemComponent } from './components/filter-item/filter-item.component';
+import { ListProductCardCatalogComponent } from './components/list-product-card-catalog/list-product-card-catalog.component';
+import { ProductCardCatalogComponent } from './components/product-card-catalog/product-card-catalog.component';
+import { FilterAsidePanelComponent } from './components/filter-aside-panel/filter-aside-panel.component';
 
 @NgModule({
   declarations: [
@@ -18,16 +21,14 @@ import { FilterItemComponent } from './components/filter-item/filter-item.compon
     SeachBarComponent,
     ProductPageComponent,
     FilterPanelComponent,
+    FilterItemComponent,
     SideFilterPanelComponent,
-    PruductListComponent,
-    ProductComponent,
-    FilterItemComponent
+    ListProductCardCatalogComponent,
+    ProductCardCatalogComponent,
+    FilterAsidePanelComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

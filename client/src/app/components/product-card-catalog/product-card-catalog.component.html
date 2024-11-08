@@ -1,1 +1,25 @@
-<p>product-card-catalog works!</p>
+<div class="product-card">
+  <div class="product-img-wrapper">
+    <img
+      src="{{ product.img }}"
+      width="200px"
+      height="200px"
+      alt="productImg"
+    />
+  </div>
+  <div class="product-card__info">
+    <h2 class="product-name">{{ product.name }}</h2>
+    <p class="product-desc">{{ product.description }}</p>
+    <div class="product-card__price-add-btn">
+      <p class="price">{{ product.price }} ₽</p>
+      <button>
+        <img
+          src="plus-icon.png"
+          width="12px"
+          height="12px"
+          alt="plusIcon"
+        />Добавить
+      </button>
+    </div>
+  </div>
+</div>
