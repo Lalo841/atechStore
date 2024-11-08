@@ -10,8 +10,6 @@ import { FilterPanelComponent } from './components/filter-panel/filter-panel.com
 import { SideFilterPanelComponent } from './components/side-filter-panel/side-filter-panel.component';
 
 import { FilterItemComponent } from './components/filter-item/filter-item.component';
-import { ProductCardCatalogComponent } from './components/product-card-catalog/product-card-catalog.component';
-import { ListProductCardCatalogComponent } from './components/list-product-card-catalog/list-product-card-catalog.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +19,9 @@ import { ListProductCardCatalogComponent } from './components/list-product-card-
     ProductPageComponent,
     FilterPanelComponent,
     SideFilterPanelComponent,
-    FilterItemComponent,
-    ProductCardCatalogComponent,
-    ListProductCardCatalogComponent
+    PruductListComponent,
+    ProductComponent,
+    FilterItemComponent
   ],
   imports: [
     BrowserModule,
