@@ -11,6 +11,7 @@ import { SideFilterPanelComponent } from './components/side-filter-panel/side-fi
 import { PruductListComponent } from './components/pruduct-list/pruduct-list.component';
 import { ProductComponent } from './components/product/product.component';
 import { FilterItemComponent } from './components/filter-item/filter-item.component';
+import { FilterAsidePanelComponent } from './components/filter-aside-panel/filter-aside-panel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FilterItemComponent } from './components/filter-item/filter-item.compon
     SideFilterPanelComponent,
     PruductListComponent,
     ProductComponent,
-    FilterItemComponent
+    FilterItemComponent,
+    FilterAsidePanelComponent
   ],
   imports: [
     BrowserModule,
