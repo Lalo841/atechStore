@@ -1,10 +1,9 @@
-<div class="page-container">
-  <h1 class="selected-filter">{{selectedText}}</h1> 
+ <div class="page-container">
+  <h1 class="selected-filter">{{ selectedText }}</h1>
   <app-filter-panel></app-filter-panel>
 
   <div class="page-container__content">
-    <app-filter-aside-panel></app-filter-aside-panel>
-    <app-list-product-card-catalog [products]="products"></app-list-product-card-catalog>
+    <app-filter-aside-panel (filtersChanged)="onFiltersChange($event)"></app-filter-aside-panel>
+    <app-list-product-card-catalog [products]="filteredProducts"></app-list-product-card-catalog>
   </div>
 </div>
-
