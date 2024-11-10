@@ -1,0 +1,99 @@
+
+
+  .filter-asside-cont{
+    margin-top: 35px;
+  }
+
+  .filter-name{
+    font-size: 22px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+
+  }
+
+.filter-name-price, .filter-name-warranty{
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.price-input1, .warranty-input1{
+height: 40px;
+width: 108px;
+margin-right: 15px;
+}
+
+.price-input2, .warranty-input2{
+height: 40px;
+width: 108px;
+}
+
+.form-item-cont{
+  display: flex;
+}
+
+.price-input1::placeholder, .price-input2::placeholder {
+    color: #BBBBBB; 
+    font-size: 14px; 
+    padding-left: 75px; 
+ }
+
+ .warranty-input1::placeholder, .warranty-input2::placeholder {
+    color: #BBBBBB; 
+    font-size: 14px; 
+
+ }
+
+.line{
+  width: 231px;
+  height: 1px;
+  border: none;
+  background-color: #F6F6F6; 
+  margin-top: 10px; 
+
+}
+  
+  .price-input, .warranty-input {
+    padding: 10px;
+    border: 1px solid #F0F0F0; 
+    border-radius: 10px; 
+    font-size: 16px;
+    
+    /* Убираем стрелочки у полей типа number */
+    -webkit-appearance: none; /* Для Webkit-браузеров (Chrome, Safari, Opera) */
+    -moz-appearance: textfield; /* Для Firefox */
+    appearance: textfield; /* Для других браузеров */
+  }
+  
+  .price-input::-webkit-outer-spin-button,
+  .price-input::-webkit-inner-spin-button,
+  .warranty-input::-webkit-outer-spin-button,
+  .warranty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Убираем стрелочки в Webkit-браузерах */
+    margin: 0;
+  }
+  
+  .filter-asside-btn {
+    margin-top: 35px;
+    background-color: #00A9FE; 
+    width: 244px;
+    height: 50px;
+    border-radius: 18px;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    border: none;
+
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .filter-asside-btn:disabled {
+    background-color: #cccccc; /* Серый цвет для отключенной кнопки */
+    cursor: not-allowed;
+  }
+
+.filter-by-price{
+    margin-bottom: 70px;
+}
