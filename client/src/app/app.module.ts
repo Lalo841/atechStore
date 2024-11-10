@@ -13,6 +13,7 @@ import { SideFilterPanelComponent } from './components/side-filter-panel/side-fi
 import { ListProductCardCatalogComponent } from './components/list-product-card-catalog/list-product-card-catalog.component';
 import { ProductCardCatalogComponent } from './components/product-card-catalog/product-card-catalog.component';
 import { FilterAsidePanelComponent } from './components/filter-aside-panel/filter-aside-panel.component';
+import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FilterAsidePanelComponent } from './components/filter-aside-panel/filte
     ListProductCardCatalogComponent,
     ProductCardCatalogComponent,
     FilterAsidePanelComponent,
+    FilterPipePipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
