@@ -16,6 +16,7 @@ import { ListProductCardCatalogComponent } from './components/list-product-card-
 import { ProductCardCatalogComponent } from './components/product-card-catalog/product-card-catalog.component';
 import { FilterAsidePanelComponent } from './components/filter-aside-panel/filter-aside-panel.component';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
+import { ModuleWindowCardComponent } from './components/module-window-card/module-window-card.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FilterPipePipe } from './pipes/filter-pipe.pipe';
     ProductCardCatalogComponent,
     FilterAsidePanelComponent,
     FilterPipePipe,
+    ModuleWindowCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],
