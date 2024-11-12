@@ -1,0 +1,101 @@
+/* Стили для модального окна */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);  /* Темный полупрозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  /* Чтобы окно было поверх других элементов */
+    overflow: auto;  /* Отключаем прокрутку страницы при открытом окне */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    height: 500px;
+    width: 80%; /* Сделаем окно немного уже */
+    max-width: 1000px;  /* Ограничим максимальную ширину */
+    border-radius: 20px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+    display: flex;  /* Используем flexbox для выравнивания */
+}
+
+.modal-content-left {
+    flex: 0 0 30%;  /* Картинка занимает 30% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content-left img {
+    width: 100%; /* Изображение растягивается до ширины контейнера */
+    height: auto; /* Высота подстраивается пропорционально */
+    object-fit: contain; /* Сохраняет пропорции изображения */
+    margin-left: 20px;
+}
+
+.modal-content-right {
+    flex: 1;  /* Текст занимает оставшееся пространство */
+    padding-left: 130px;  /* Отступ между картинкой и текстом */
+    position: relative;  /* Добавляем относительное позиционирование для кнопки */
+}
+
+.modal-content-right h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #373737;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+.modal-content-right p {
+    font-size: 14px;
+    color: #000000;
+    font-family: "Nunito", sans-serif;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.modal-content-right span {
+    font-size: 14px;
+    color: #000000;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+.product-info {
+    margin-top: 30px;
+}
+
+.price-and-button {
+    display: flex; /* Выравниваем цену и кнопку на одной линии */
+    justify-content: space-between; /* Цена слева, кнопка справа */
+    align-items: center; /* Выравниваем по вертикали */
+}
+
+.modal-btn {
+    background-color: #00A9FE; 
+    width: 244px;
+    height: 50px;
+    border-radius: 18px;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+/* Для добавления скролла к описанию */
+.description-text {
+    font-size: 14px;
+    color: #B1B1B1;
+    width: 400px;
+    max-height: 200px; /* Ограничиваем максимальную высоту */
+    overflow-y: auto; /* Добавляем вертикальный скролл */
+    margin-top: 10px;
+}

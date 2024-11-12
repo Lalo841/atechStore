@@ -1,0 +1,210 @@
+// .sort-panel-cont{
+//     margin-top: -200px;
+// }
+// .sort-panel input[type="radio"] {
+//     appearance: none; /* Отключаем стандартный стиль браузера */
+//     width: 24px; /* Размер круга */
+//     height: 24px; /* Размер круга */
+//     border-radius: 50%; /* Делаем форму круга */
+//     border: 0px solid #ccc; /* Цвет границы в обычном состоянии */
+//     background-color: #F1F1F1; /* Цвет фона по умолчанию (серый) */
+
+//   }
+  
+//   /* Состояние, когда радиокнопка выбрана */
+//   .sort-panel input[type="radio"]:checked {
+//     border-color: #00A9FE; /* Синий цвет границы */
+//     background-color: #ffffff; /* Белый цвет фона внутри круга */
+//     border-width: 8px; /* Толщина границы при выборе */
+//   }
+  
+//   .sort-panel{
+//     display: flex; /* Включаем Flexbox */
+//     flex-direction: column; /* Располагаем элементы в колонку */
+//     align-items: flex-start; /* Выравнивание элементов по левому краю */
+//     gap: 16px; /* Расстояние между элементами */
+//   }
+  
+//   .sort-panel label {
+//     display: flex; /* Для выравнивания радиокнопки и текста по вертикали */
+//     align-items: center; /* Выравнивание по вертикали */
+//     font-family: "Nunito", sans-serif;
+//   }
+
+//   .sort-btn {
+//     background-color: #00A9FE; 
+//     width: 244px;
+//     height: 50px;
+//     border-radius: 18px;
+//     color: white;
+//     font-family: "Nunito", sans-serif;
+//     border: none;
+//     font-size: 16px;
+//     font-weight: bold;
+//     margin-right: 50px;
+//     margin-top: 20px;
+// }
+
+// .sort-panel-label{
+//     margin-left: 10px;
+// }
+
+// .sort-panel-cont h2{
+//     font-size: 22px;
+//     font-family: "Nunito", sans-serif;
+//     font-weight: bold;
+// }
+
+// .sort-name-price, .sort-name-manufacturer, .sort-name-warranty{
+//     font-size: 16px;
+//     font-family: "Nunito", sans-serif;
+//     font-weight: bold;
+//     margin-top: 15px;
+//     margin-bottom: -10px;
+// }
+
+/* Отступы для сортировки и фильтрации */
+.sort-panel-cont {
+    margin-top: 35px; /* Убираем отрицательный отступ, чтобы блоки не налегали */
+    display: flex;
+    flex-direction: column; /* Выравнивание блоков по вертикали */
+
+}
+
+.sort-panel {
+    display: flex; /* Выравнивание радиокнопок и текста */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.sort-panel label {
+    display: flex;
+    align-items: center;
+    font-family: "Nunito", sans-serif;
+}
+
+/* Стили для кнопок */
+.sort-btn {
+    background-color: #00A9FE;
+    width: 244px;
+    height: 50px;
+    border-radius: 18px;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+/* Стили для фильтров */
+.filter-asside-cont {
+    margin-top: 35px;
+}
+
+.filter-name {
+    font-size: 22px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+/* Фильтрация по цене и гарантии */
+.filter-name-price, .filter-name-warranty {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Настройки для инпутов */
+.price-input1, .warranty-input1 {
+    height: 40px;
+    width: 108px;
+    margin-right: 15px;
+}
+
+.price-input2, .warranty-input2 {
+    height: 40px;
+    width: 108px;
+}
+
+/* Общие стили для блоков */
+.form-item-cont {
+    display: flex;
+}
+
+.line {
+    width: 231px;
+    height: 1px;
+    border: none;
+    background-color: #F6F6F6;
+    margin-top: 10px;
+}
+
+/* Фильтр кнопка */
+.filter-asside-btn {
+    margin-top: 35px;
+    background-color: #00A9FE;
+    width: 244px;
+    height: 50px;
+    border-radius: 18px;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Применение фокуса и стилей для инпутов */
+.price-input, .warranty-input {
+    padding: 10px;
+    border: 1px solid #F0F0F0;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Убираем стрелочки у полей ввода */
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button,
+.warranty-input::-webkit-outer-spin-button,
+.warranty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Обновление стилей для радиокнопок */
+.sort-panel input[type="radio"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 0px solid #ccc;
+    background-color: #F1F1F1;
+}
+
+.sort-panel input[type="radio"]:checked {
+    border-color: #00A9FE;
+    background-color: #ffffff;
+    border-width: 8px;
+}
+
+.sort-panel-label {
+    margin-left: 10px;
+}
+
+.sort-panel-cont h2 {
+    font-size: 22px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+.sort-name-price, .sort-name-manufacturer, .sort-name-warranty {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
