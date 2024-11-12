@@ -13,4 +13,6 @@ export class ModuleWindowCardComponent {
   closeModal() {
     this.modalClose.emit();  // Генерируем событие для родителя
   }
+
+  
 }
