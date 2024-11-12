@@ -1,0 +1,25 @@
+<div class="modal">
+  <div class="modal-content" (click)="closeModal()">
+    <div class="modal-content-left">
+      <img [src]="product?.img" alt="{{ product?.name }}"/>
+    </div>
+    <div class="modal-content-right">
+      <h2>{{ product?.name }}</h2>
+      <p [style.color]="'#B1B1B1'" [style.width]="'400px'" class="description-text">
+        {{ product?.description }}
+      </p>
+      <div class="product-info">
+        <p><span>Рейтинг:</span> {{product?.rating }}</p>
+        <p><span>Гарантия:</span> {{product?.warranty }} месяцев</p>
+        <p><span>Производитель:</span> {{product?.manufacturer }}</p>
+        <div class="price-and-button">
+          <p style="font-size: 32px; font-weight: bold; color: #373737;">
+            <span></span> {{ product?.price }} ₽
+          </p>    
+          <button class="modal-btn">Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,45 @@
+<div class="sort-panel-cont">
+    <h2>Сортировка</h2>
+
+    <!-- Сортировка по цене -->
+    <div class="sort-panel">
+      <p class="sort-name-price">По цене:</p>
+      <label>
+        <input type="radio" [(ngModel)]="selectedSortOrder" value="asc-price" (change)="onSortChange('asc-price')" />
+        <span class="sort-panel-label">По возрастанию</span>
+      </label>
+      <label>
+        <input type="radio" [(ngModel)]="selectedSortOrder" value="desc-price" (change)="onSortChange('desc-price')" />
+        <span class="sort-panel-label">По убыванию</span>
+      </label>
+    </div>
+  
+    <!-- Сортировка по производителю -->
+    <div class="sort-panel">
+      <p class="sort-name-manufacturer">По производителю:</p>
+      <label>
+        <input type="radio" [(ngModel)]="selectedSortOrder" value="asc-manufacturer" (change)="onSortChange('asc-manufacturer')" />
+        <span class="sort-panel-label">По алфавиту (A-Z)</span>
+      </label>
+      <label>
+        <input type="radio" [(ngModel)]="selectedSortOrder" value="desc-manufacturer" (change)="onSortChange('desc-manufacturer')" />
+        <span class="sort-panel-label">По алфавиту (Z-A)</span>
+      </label>
+    </div>
+  
+    <!-- Сортировка по гарантии -->
+    <div class="sort-panel">
+      <p class="sort-name-warranty">По гарантии:</p>
+      <label>
+        <input type="radio" [(ngModel)]="selectedSortOrder" value="asc-warranty" (change)="onSortChange('asc-warranty')" />
+        <span class="sort-panel-label">По возрастанию</span>
+      </label>
+      <label>
+        <input type="radio" [(ngModel)]="selectedSortOrder" value="desc-warranty" (change)="onSortChange('desc-warranty')" />
+        <span class="sort-panel-label">По убыванию</span>
+      </label>
+    </div>
+  
+    <!-- Кнопка сброса сортировки -->
+    <button (click)="onResetSort()" class="sort-btn">Сбросить</button>
+  </div>

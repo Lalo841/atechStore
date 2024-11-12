@@ -20,6 +20,8 @@ import { ListProductCardCatalogComponent } from './components/list-product-card-
 import { ProductCardCatalogComponent } from './components/product-card-catalog/product-card-catalog.component';
 import { FilterAsidePanelComponent } from './components/filter-aside-panel/filter-aside-panel.component';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
+import { ModuleWindowCardComponent } from './components/module-window-card/module-window-card.component';
+import { SortPanelComponent } from './components/sort-panel/sort-panel.component';
 import { ModalWindowSignInComponent } from './components/modal-window-sign-in/modal-window-sign-in.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
@@ -36,6 +38,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     ProductCardCatalogComponent,
     FilterAsidePanelComponent,
     FilterPipePipe,
+    ModuleWindowCardComponent,
+    SortPanelComponent,
     ModalWindowSignInComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatButtonModule],

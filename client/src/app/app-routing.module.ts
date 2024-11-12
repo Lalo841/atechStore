@@ -7,6 +7,20 @@ const routes: Routes = [
     path: '',
     component: ProductPageComponent,
   },
+  {
+    path: 'sys-info',
+    component: ProductPageComponent,
+  },
+  {
+    path: 'devs-info',
+    component: ProductPageComponent,
+  },
+  {
+    path: '**',
+    component: ProductPageComponent,
+  },
+
+
 ];
 
 @NgModule({
