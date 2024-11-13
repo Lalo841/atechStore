@@ -1,10 +1,10 @@
 <div class="modal-content">
-    <h2>Вход в аккаунт</h2>
-    <p>Введите почту и пароль</p>
-    <form>
-      <input type="email" placeholder="Email" required />
-      <input type="password" placeholder="Пароль" required />
-      <button type="submit" class="sign-in-button">Войти</button>
-      <button type="button" class="sign-up-button">Если нет аккаунта - зарегистрируйтесь</button>
-    </form>
-  </div>
+  <h2>Вход в аккаунт</h2>
+  <p>Введите почту и пароль</p>
+  <form>
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Пароль" required />
+    <button type="submit" class="sign-in-button">Войти</button>
+    <button type="button" class="sign-up-button" (click)="openSignUpModal()">Если нет аккаунта - зарегистрируйтесь</button>
+  </form>
+</div>
