@@ -68,6 +68,7 @@ export class ProductPageComponent implements OnInit {
       img: 'img-devices/image6.png', 
       description: 'Видеокарта NVIDIA GeForce RTX 4060 с архитектурой Ada Lovelace, поддержка DLSS 3.0 и Ray Tracing, идеальна для игр в 1440p и 4K.' 
     }
+    
   ];
 
   constructor(private filterTextService: FilterTextService) {}
@@ -88,31 +89,7 @@ export class ProductPageComponent implements OnInit {
   maxWarranty: number | null = null;
   selectedManufacturer: string | null = null;  // Новый параметр для фильтрации
 
-  // Функция фильтрации товаров по цене и гарантии
-  // filterProducts() {
-  //   this.filteredProducts = this.products.filter(product => {
-  //     const price = product.price;
-  //     const warranty = product.warranty;
 
-  //     const isAboveMinPrice = this.minPrice !== null ? price >= this.minPrice : true;
-  //     const isBelowMaxPrice = this.maxPrice !== null ? price <= this.maxPrice : true;
-
-  //     const isAboveMinWarranty = this.minWarranty !== null ? warranty >= this.minWarranty : true;
-  //     const isBelowMaxWarranty = this.maxWarranty !== null ? warranty <= this.maxWarranty : true;
-
-  //     return isAboveMinPrice && isBelowMaxPrice && isAboveMinWarranty && isBelowMaxWarranty;
-  //   });
-  // }
-
-  // // Метод, который обновляет фильтрацию товаров на основе цен и гарантии
-  // onFiltersChange(filters: { minPrice: number | null, maxPrice: number | null, minWarranty: number | null, maxWarranty: number | null }) {
-  //   this.minPrice = filters.minPrice;
-  //   this.maxPrice = filters.maxPrice;
-  //   this.minWarranty = filters.minWarranty;
-  //   this.maxWarranty = filters.maxWarranty;
-
-  //   this.filterProducts(); // Применяем фильтрацию после получения значений
-  // }
 
 
 // Функция фильтрации товаров

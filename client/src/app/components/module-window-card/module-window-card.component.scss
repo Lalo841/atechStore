@@ -1,47 +1,46 @@
-/* Стили для модального окна */
 .modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);  /* Темный полупрозрачный фон */
+    background: rgba(0, 0, 0, 0.7); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;  /* Чтобы окно было поверх других элементов */
-    overflow: auto;  /* Отключаем прокрутку страницы при открытом окне */
+    z-index: 1000; 
+    overflow: auto;  
 }
 
 .modal-content {
     background-color: #fff;
     padding: 20px;
     height: 500px;
-    width: 80%; /* Сделаем окно немного уже */
-    max-width: 1000px;  /* Ограничим максимальную ширину */
+    width: 80%;
+    max-width: 1000px; 
     border-radius: 20px;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
-    display: flex;  /* Используем flexbox для выравнивания */
+    display: flex;  
 }
 
 .modal-content-left {
-    flex: 0 0 30%;  /* Картинка занимает 30% */
+    flex: 0 0 30%;  
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .modal-content-left img {
-    width: 100%; /* Изображение растягивается до ширины контейнера */
-    height: auto; /* Высота подстраивается пропорционально */
-    object-fit: contain; /* Сохраняет пропорции изображения */
+    width: 100%; 
+    height: auto; 
+    object-fit: contain;
     margin-left: 20px;
 }
 
 .modal-content-right {
-    flex: 1;  /* Текст занимает оставшееся пространство */
-    padding-left: 130px;  /* Отступ между картинкой и текстом */
-    position: relative;  /* Добавляем относительное позиционирование для кнопки */
+    flex: 1; 
+    padding-left: 130px; 
+    position: relative; 
 }
 
 .modal-content-right h2 {
@@ -72,9 +71,9 @@
 }
 
 .price-and-button {
-    display: flex; /* Выравниваем цену и кнопку на одной линии */
-    justify-content: space-between; /* Цена слева, кнопка справа */
-    align-items: center; /* Выравниваем по вертикали */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .modal-btn {
@@ -90,12 +89,12 @@
     margin-right: 50px;
 }
 
-/* Для добавления скролла к описанию */
+
 .description-text {
     font-size: 14px;
     color: #B1B1B1;
     width: 400px;
-    max-height: 200px; /* Ограничиваем максимальную высоту */
-    overflow-y: auto; /* Добавляем вертикальный скролл */
+    max-height: 200px; 
+    overflow-y: auto; 
     margin-top: 10px;
 }
