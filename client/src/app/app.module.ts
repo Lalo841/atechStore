@@ -24,6 +24,7 @@ import { ModuleWindowCardComponent } from './components/module-window-card/modul
 import { SortPanelComponent } from './components/sort-panel/sort-panel.component';
 import { ModalWindowSignInComponent } from './components/modal-window-sign-in/modal-window-sign-in.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ModalWindowSignUpComponent } from './components/modal-window-sign-up/modal-window-sign-up.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     ModuleWindowCardComponent,
     SortPanelComponent,
     ModalWindowSignInComponent,
+    ModalWindowSignUpComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatButtonModule],
   providers: [
