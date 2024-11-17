@@ -2,20 +2,22 @@
   <h1 class="selected-filter">{{ selectedText }}</h1>
   <app-filter-panel></app-filter-panel>
 
-
   <div class="page-container__content">
-    <app-filter-aside-panel (filtersChanged)="onFiltersChange($event)"></app-filter-aside-panel>
-    
-    <app-list-product-card-catalog 
-      [products]="filteredProducts" 
-      (productSelected)="onProductSelected($event)">
-    </app-list-product-card-catalog> 
+    <app-filter-aside-panel
+      (filtersChanged)="onFiltersChange($event)"
+    ></app-filter-aside-panel>
 
-  </div> 
-
-  <app-module-window-card *ngIf="openTheDoor" [product]="selectedProduct" (modalClose)="closeModal()"></app-module-window-card>
-<app-sort-panel (sortChanged)="onSortChange($event)"></app-sort-panel>
-    <app-list-product-card-catalog [products]="filteredProducts"></app-list-product-card-catalog>
+    <app-list-product-card-catalog
+      [products]="filteredProducts"
+      (productSelected)="onProductSelected($event)"
+    >
+    </app-list-product-card-catalog>
   </div>
 
+  <app-module-window-card
+    *ngIf="openTheDoor"
+    [product]="selectedProduct"
+    (modalClose)="closeModal()"
+  ></app-module-window-card>
+  <app-sort-panel (sortChanged)="onSortChange($event)"></app-sort-panel>
 </div>
