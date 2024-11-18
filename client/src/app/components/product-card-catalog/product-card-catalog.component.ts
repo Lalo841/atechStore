@@ -1,6 +1,5 @@
-
-
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CartService } from '../../services/cart-service/cart.service';
 
 @Component({
   selector: 'app-product-card-catalog',
@@ -10,6 +9,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ProductCardCatalogComponent {
   @Input() product!: any;
   @Output() productSelected: EventEmitter<any> = new EventEmitter();
+
+  constructor(private cartService: CartService){}
+
+  addBtnHandler(){
+    this.cartService.addToCart(this.product);
+  }
 
   onProductClick() {
     this.productSelected.emit(this.product);

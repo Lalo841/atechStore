@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';  
+import { FormsModule } from '@angular/forms';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -25,6 +25,12 @@ import { SortPanelComponent } from './components/sort-panel/sort-panel.component
 import { ModalWindowSignInComponent } from './components/modal-window-sign-in/modal-window-sign-in.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ModalWindowSignUpComponent } from './components/modal-window-sign-up/modal-window-sign-up.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { SysInfoPageComponent } from './pages/sys-info-page/sys-info-page.component';
+import { DevsInfoPageComponent } from './pages/devs-info-page/devs-info-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { CartProductComponent } from './components/cart-product/cart-product.component';
 
 @NgModule({
   declarations: [
@@ -43,11 +49,24 @@ import { ModalWindowSignUpComponent } from './components/modal-window-sign-up/mo
     SortPanelComponent,
     ModalWindowSignInComponent,
     ModalWindowSignUpComponent,
+    CartPageComponent,
+    SysInfoPageComponent,
+    DevsInfoPageComponent,
+    ProfilePageComponent,
+    NotFoundPageComponent,
+    CartProductComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatButtonModule],
-  providers: [
-    provideAnimationsAsync()
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
   ],
+  providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

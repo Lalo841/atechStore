@@ -1,7 +1,7 @@
 export interface Product {
   name: string;
   description: string;
-  price: string;
+  price: number;
   warranty: number;
   rating: number;
   manufacturer: string;

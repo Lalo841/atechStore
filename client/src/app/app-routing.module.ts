@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { SysInfoPageComponent } from './pages/sys-info-page/sys-info-page.component';
+import { DevsInfoPageComponent } from './pages/devs-info-page/devs-info-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 const routes: Routes = [
   {
@@ -8,18 +13,25 @@ const routes: Routes = [
     component: ProductPageComponent,
   },
   {
+    path: 'cart',
+    component: CartPageComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfilePageComponent,
+  },
+  {
     path: 'sys-info',
-    component: ProductPageComponent,
+    component: SysInfoPageComponent,
   },
   {
     path: 'devs-info',
-    component: ProductPageComponent,
+    component: DevsInfoPageComponent,
   },
   {
     path: '**',
-    component: ProductPageComponent,
+    component: NotFoundPageComponent,
   },
-
 
 ];
 
