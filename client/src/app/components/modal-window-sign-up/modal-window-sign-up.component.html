@@ -1,9 +1,25 @@
 <div class="modal-content">
-    <h2>Регистрация</h2>
-    <p>Введите почту и пароль, чтобы зарегистрироваться</p>
-    <form>
-      <input type="email" placeholder="Email" required />
-      <input type="password" placeholder="Пароль" required />
-      <button type="submit" class="sign-up-button">Зарегистрироваться</button>
-    </form>
-  </div>
+  <h2>Регистрация</h2>
+  <p>Введите почту и пароль, чтобы зарегистрироваться</p>
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <input 
+      type="text" 
+      formControlName="email" 
+      placeholder="Email" 
+    />
+    <small *ngIf="email?.invalid && email?.touched" class="error">
+      {{ getEmailErrorMessage() }}
+    </small>
+
+    <input 
+      type="password" 
+      formControlName="password" 
+      placeholder="Пароль" 
+    />
+    <small *ngIf="password?.invalid && password?.touched" class="error">
+      {{ getPasswordErrorMessage() }}
+    </small>
+
+    <button type="submit" class="sign-up-button" [disabled]="signUpForm.invalid">Зарегистрироваться</button>
+  </form>
+</div>
