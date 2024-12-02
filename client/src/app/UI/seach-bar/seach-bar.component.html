@@ -1,4 +1,30 @@
-<div class="input-item">
+<!-- <div class="input-item">
   <img src="search-icon.png" width="16px" height="16px" alt="searchIcon" />
   <input type="text" placeholder="Поиск комплектующих..." />
+</div> -->
+
+<!-- 
+<div class="input-item">
+  <img src="search-icon.png" width="16px" height="16px" alt="searchIcon" />
+  <input 
+    type="text" 
+    placeholder="Поиск комплектующих..." 
+    [(ngModel)]="searchText"  
+    (input)="onSearchChange()" 
+  />
+</div> -->
+
+
+<div class="input-item">
+  <img src="search-icon.png" width="16px" height="16px" alt="searchIcon" />
+  <div class="input-wrap">
+    <input 
+    type="text" 
+    placeholder="Поиск комплектующих..." 
+    [(ngModel)]="searchText"  
+    (input)="onSearchChange()"  
+  />
+
+  </div>
+ 
 </div>

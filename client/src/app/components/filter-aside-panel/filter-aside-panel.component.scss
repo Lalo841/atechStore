@@ -113,3 +113,32 @@ select option:hover {
   color: #fff; /* Цвет текста при наведении */
   background-color: #007bff; /* Цвет фона при наведении (например, синий) */
 }
+
+/* Стиль для ошибки */
+.error-message {
+  position: absolute; /* Размещение поверх других элементов */
+  bottom: -30px; /* Расстояние от поля ввода */
+  left: 0;
+  background-color: #f8d7da; /* Красный фон для ошибки */
+  color: #721c24; /* Цвет текста ошибки */
+  padding: 5px 10px; /* Отступы */
+  border-radius: 5px; /* Скругленные углы */
+  font-size: 12px; /* Размер текста */
+  width: 100%; /* Ширина ошибки равна ширине поля */
+  box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+  z-index: 10; /* Обеспечивает, что ошибка будет сверху */
+  display: block;
+}
+
+/* Чтобы ошибки не мешали layout */
+.form-item {
+  position: relative; /* Обеспечивает корректное позиционирование для ошибок */
+}
+
+/* Дополнительное улучшение стилей */
+.price-input1:invalid,
+.warranty-input1:invalid,
+.price-input2:invalid,
+.warranty-input2:invalid {
+  border-color: #f8d7da; /* Красная рамка для некорректных полей */
+}

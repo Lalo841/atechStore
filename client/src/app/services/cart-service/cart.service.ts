@@ -17,6 +17,7 @@ export class CartService {
         img: 'img-devices/image2.png',
         description:
           'Среднеразмерный корпус Cougar Duoface Pro RGB с поддержкой ARGB-подсветки, обеспечивающий отличную вентиляцию и стильный внешний вид.',
+        category:'Процессор'
       },
       3,
     ],

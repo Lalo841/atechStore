@@ -1,3 +1,5 @@
+<app-seach-bar (searchTextChanged)="onSearchTextChanged($event)"></app-seach-bar>   
+
 <div class="page-container">
   <h1 class="selected-filter">{{ selectedText }}</h1>
   <app-filter-panel></app-filter-panel>
@@ -19,3 +21,6 @@
   <app-module-window-card *ngIf="openTheDoor" [product]="selectedProduct" (modalClose)="closeModal()"></app-module-window-card>
 
 </div>
+
+
+

@@ -1,5 +1,4 @@
-
-  <div class="filter-asside-cont">
+<!-- <div class="filter-asside-cont"> 
     <p class="filter-name">Фильтрация</p>
   
     <form class="form-group" [formGroup]="addProductFrom">
@@ -7,10 +6,28 @@
         <p class="filter-name-price">Цена от и до:</p>
         <div class="form-item-cont">
           <div class="form-item">
-            <input type="number" formControlName="minPrice" placeholder="₽" class="price-input price-input1" />
+            <input 
+              type="number" 
+              formControlName="minPrice" 
+              placeholder="₽" 
+              class="price-input price-input1" 
+              (input)="removeLeadingZeros($event, 'minPrice')" 
+            />
+            <div *ngIf="addProductFrom.get('minPrice')?.touched && addProductFrom.get('minPrice')?.invalid">
+              <small *ngIf="addProductFrom.get('minPrice')?.hasError('min')">Минимальная стоимость товара – 1 рубль.</small>
+            </div>
           </div>
           <div class="form-item">
-            <input type="number" formControlName="maxPrice" placeholder="₽" class="price-input price-input2" />
+            <input 
+              type="number" 
+              formControlName="maxPrice" 
+              placeholder="₽" 
+              class="price-input price-input2" 
+              (input)="removeLeadingZeros($event, 'maxPrice')" 
+            />
+            <div *ngIf="addProductFrom.get('maxPrice')?.touched && addProductFrom.get('maxPrice')?.invalid">
+              <small *ngIf="addProductFrom.get('maxPrice')?.hasError('max')">Максимальная стоимость товара – 1 млн. рублей.</small>
+            </div>
           </div>
         </div>
         <hr class="line">
@@ -20,16 +37,33 @@
         <p class="filter-name-warranty">Гарантия от и до:</p>
         <div class="form-item-cont">
           <div class="form-item">
-            <input type="number" formControlName="minWarranty" placeholder="Месяцев" class="warranty-input warranty-input1" />
+            <input 
+              type="number" 
+              formControlName="minWarranty" 
+              placeholder="Месяцев" 
+              class="warranty-input warranty-input1" 
+              (input)="removeLeadingZeros($event, 'minWarranty')" 
+            />
+            <div *ngIf="addProductFrom.get('minWarranty')?.touched && addProductFrom.get('minWarranty')?.invalid">
+              <small *ngIf="addProductFrom.get('minWarranty')?.hasError('min')">Минимальная гарантия на товар – 12 месяцев.</small>
+            </div>
           </div>
           <div class="form-item">
-            <input type="number" formControlName="maxWarranty" placeholder="Месяцев" class="warranty-input warranty-input2" />
+            <input 
+              type="number" 
+              formControlName="maxWarranty" 
+              placeholder="Месяцев" 
+              class="warranty-input warranty-input2" 
+              (input)="removeLeadingZeros($event, 'maxWarranty')" 
+            />
+            <div *ngIf="addProductFrom.get('maxWarranty')?.touched && addProductFrom.get('maxWarranty')?.invalid">
+              <small *ngIf="addProductFrom.get('maxWarranty')?.hasError('max')">Максимальная гарантия на товар – 10 лет.</small>
+            </div>
           </div>
         </div>
         <hr class="line">
       </div> 
   
-      <!-- Новый фильтр по производителю -->
       <div class="filter-by-manufacturer">
         <p class="filter-name-manufacturer">По производителю:</p>
         <div class="form-item">
@@ -46,3 +80,107 @@
       </button>
     </form>
   </div>
+
+
+   -->
+
+
+
+   <div class="filter-asside-cont"> 
+    <p class="filter-name">Фильтрация</p>
+  
+    <form class="form-group" [formGroup]="addProductFrom">
+      <div class="filter-by-price">
+        <p class="filter-name-price">Цена от и до:</p>
+        <div class="form-item-cont">
+          <div class="form-item">
+            <input 
+              type="number" 
+              formControlName="minPrice" 
+              placeholder="₽" 
+              class="price-input price-input1" 
+              (input)="removeLeadingZeros($event, 'minPrice')" 
+            />
+            <div *ngIf="addProductFrom.get('minPrice')?.touched && addProductFrom.get('minPrice')?.invalid">
+              <div *ngIf="addProductFrom.get('minPrice')?.hasError('min')" 
+                   class="error-message" 
+                   (click)="closeError('minPrice')">
+                Минимальная стоимость товара – 1 рубль.
+              </div>
+            </div>
+          </div>
+          <div class="form-item">
+            <input 
+              type="number" 
+              formControlName="maxPrice" 
+              placeholder="₽" 
+              class="price-input price-input2" 
+              (input)="removeLeadingZeros($event, 'maxPrice')" 
+            />
+            <div *ngIf="addProductFrom.get('maxPrice')?.touched && addProductFrom.get('maxPrice')?.invalid">
+              <div *ngIf="addProductFrom.get('maxPrice')?.hasError('max')" 
+                   class="error-message" 
+                   (click)="closeError('maxPrice')">
+                Максимальная стоимость товара – 1 млн. рублей.
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="line">
+      </div>
+  
+      <div class="filter-by-warranty">
+        <p class="filter-name-warranty">Гарантия от и до:</p>
+        <div class="form-item-cont">
+          <div class="form-item">
+            <input 
+              type="number" 
+              formControlName="minWarranty" 
+              placeholder="Месяцев" 
+              class="warranty-input warranty-input1" 
+              (input)="removeLeadingZeros($event, 'minWarranty')" 
+            />
+            <div *ngIf="addProductFrom.get('minWarranty')?.touched && addProductFrom.get('minWarranty')?.invalid">
+              <div *ngIf="addProductFrom.get('minWarranty')?.hasError('min')" 
+                   class="error-message" 
+                   (click)="closeError('minWarranty')">
+                Минимальная гарантия на товар – 12 месяцев.
+              </div>
+            </div>
+          </div>
+          <div class="form-item">
+            <input 
+              type="number" 
+              formControlName="maxWarranty" 
+              placeholder="Месяцев" 
+              class="warranty-input warranty-input2" 
+              (input)="removeLeadingZeros($event, 'maxWarranty')" 
+            />
+            <div *ngIf="addProductFrom.get('maxWarranty')?.touched && addProductFrom.get('maxWarranty')?.invalid">
+              <div *ngIf="addProductFrom.get('maxWarranty')?.hasError('max')" 
+                   class="error-message" 
+                   (click)="closeError('maxWarranty')">
+                Максимальная гарантия на товар – 10 лет.
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="line">
+      </div> 
+  
+      <div class="filter-by-manufacturer">
+        <p class="filter-name-manufacturer">По производителю:</p>
+        <div class="form-item">
+          <select formControlName="manufacturer" class="manufacturer-select">
+            <option value="">Все</option>
+            <option class="filter-manufacturer-item" *ngFor="let manufacturer of manufacturers" [value]="manufacturer">{{ manufacturer }}</option>
+          </select>
+        </div>
+        <hr class="line">
+      </div>
+  
+      <button (click)="sendToParent()" [disabled]="addProductFrom.invalid" class="filter-asside-btn">
+        Применить
+      </button>
+    </form>
+  </div> 

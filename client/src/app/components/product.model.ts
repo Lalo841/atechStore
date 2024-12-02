@@ -7,4 +7,5 @@ export interface Product {
     warranty: number; 
     manufacturer: string;
     img: string;
+    category: string;
   }
