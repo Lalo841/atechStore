@@ -1,3 +1,69 @@
+
+
+// import { Injectable } from '@angular/core';
+// import { Product } from '../../interfaces/product.interface';
+// import { BehaviorSubject, Observable } from 'rxjs';
+// @Injectable({
+//   providedIn: 'root',
+// })
+// export class CartService {
+//   private cart: Map<Product, number> = new Map();
+//   private cartCount: number = 0;
+//   private cartSubject = new BehaviorSubject<Map<Product, number>>(this.cart);
+//   private cartCountSubject = new BehaviorSubject<number>(this.cartCount);
+
+//   get getCart(): Observable<Map<Product, number>> {
+//     return this.cartSubject.asObservable();
+//   }
+
+//   get getCount(): Observable<number> {
+//     return this.cartCountSubject.asObservable();
+//   }
+
+//   // Добавить товар в корзину
+//   addToCart(value: Product): void {
+//     if (this.cart.has(value)) {
+//       let count = this.cart.get(value)!;
+//       this.cart.set(value, count + 1);
+//     } else {
+//       this.cart.set(value, 1);
+//     }
+//     this.updateCart();
+//   }
+
+//   // Уменьшить количество товара
+//   decrementCountProduct(value: Product): void {
+//     if (this.cart.get(value)! > 1) {
+//       let count = this.cart.get(value)!;
+//       this.cart.set(value, count - 1);
+//     } else {
+//       this.deleteFromCart(value);
+//     }
+//     this.updateCart();
+//   }
+
+//   // Удалить товар из корзины
+//   deleteFromCart(value: Product): void {
+//     this.cart.delete(value);
+//     this.updateCart();
+//   }
+
+//   // Очистить корзину
+//   clearCart(): void {
+//     this.cart.clear();
+//     this.updateCart();
+//   }
+
+//   // Метод для обновления корзины и уведомления подписчиков
+//   private updateCart(): void {
+//     this.cartCount = this.cart.size;
+//     this.cartSubject.next(new Map(this.cart));
+//     this.cartCountSubject.next(this.cartCount);
+//   }
+// }
+
+
+
 import { Injectable } from '@angular/core';
 import { Product } from '../../interfaces/product.interface';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -6,69 +72,58 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CartService {
-  private cart: Map<Product, number> = new Map([
-    [
-      {
-        name: 'Корпус Cougar Duoface Pro',
-        price: 11990,
-        rating: 4.5,
-        warranty: 24,
-        manufacturer: 'Cougar',
-        img: 'img-devices/image2.png',
-        description:
-          'Среднеразмерный корпус Cougar Duoface Pro RGB с поддержкой ARGB-подсветки, обеспечивающий отличную вентиляцию и стильный внешний вид.',
-        category:'Процессор'
-      },
-      3,
-    ],
-  ]);
-  private cartCount: number = this.cart.size;
-
-  private cartCountSubject = new BehaviorSubject<number>(this.cartCount);
+  private cart: Map<Product, number> = new Map();
+  private cartCount: number = 0;
   private cartSubject = new BehaviorSubject<Map<Product, number>>(this.cart);
+  private cartCountSubject = new BehaviorSubject<number>(this.cartCount);
 
-  get getCart() {
+  get getCart(): Observable<Map<Product, number>> {
     return this.cartSubject.asObservable();
-    // let tempCart: Product[] = [];
-    // for (const key of this.cart.keys()) {
-    //   tempCart.push(key);
-    // }
-    // return tempCart;
   }
 
-  get getCount() {
+  get getCount(): Observable<number> {
     return this.cartCountSubject.asObservable();
   }
 
-  addToCart(value: Product) {
+  // Добавить товар в корзину
+  addToCart(value: Product): void {
     if (this.cart.has(value)) {
-      let countProduct = this.cart.get(value);
-      this.cart.set(value, countProduct! + 1);
+      let count = this.cart.get(value)!;
+      this.cart.set(value, count + 1); // Увеличиваем количество на 1
     } else {
       this.cart.set(value, 1);
-      this.cartCount++;
     }
-    this.cartSubject.next(new Map(this.cart));
-    this.cartCountSubject.next(this.cartCount);
+    this.updateCart();
   }
 
-  decrementCountProduct(value: Product) {
+  // Уменьшить количество товара
+  decrementCountProduct(value: Product): void {
     if (this.cart.get(value)! > 1) {
-      let countProduct = this.cart.get(value);
-      this.cart.set(value, countProduct! - 1);
-    } else if (this.cart.get(value) === 1) {
+      let count = this.cart.get(value)!;
+      this.cart.set(value, count - 1);
+    } else {
       this.deleteFromCart(value);
-      this.cartCount--;
     }
-
-    this.cartSubject.next(new Map(this.cart));
-    this.cartCountSubject.next(this.cartCount);
+    this.updateCart();
   }
 
-  deleteFromCart(value: Product) {
+  // Удалить товар из корзины
+  deleteFromCart(value: Product): void {
     this.cart.delete(value);
-    this.cartCount--;
+    this.updateCart();
+  }
+
+  // Очистить корзину
+  clearCart(): void {
+    this.cart.clear();
+    this.updateCart();
+  }
+
+  // Метод для обновления корзины и уведомления подписчиков
+  private updateCart(): void {
+    this.cartCount = this.cart.size;
     this.cartSubject.next(new Map(this.cart));
     this.cartCountSubject.next(this.cartCount);
   }
 }
+

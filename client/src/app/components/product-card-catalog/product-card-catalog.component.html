@@ -18,3 +18,32 @@
     </div>
   </div>
 </div>
+
+
+<!-- <div class="product-card"> 
+  <div class="product-img-wrapper" (click)="onProductClick()">
+    <img [src]="product.img" width="200px" height="200px" alt="productImg" />
+  </div>
+  <div class="product-card__info">
+    <h2 class="product-name">{{ product.name }}</h2>
+    <p class="product-desc">{{ product.description }}</p>
+    <div class="product-card__price-add-btn">
+      <p class="price">{{ product.price }} ₽</p>
+
+      <button *ngIf="!isInCart" (click)="addBtnHandler()">
+        <img
+          src="plus-icon.png"
+          width="12px"
+          height="12px"
+          alt="plusIcon"
+        />Добавить
+      </button>
+
+      <div *ngIf="isInCart">
+        <button (click)="decrementProductCount()">-</button>
+        <span>{{ counter }}</span>
+        <button (click)="incrementProductCount()">+</button>
+      </div>
+    </div>
+  </div>
+</div> -->

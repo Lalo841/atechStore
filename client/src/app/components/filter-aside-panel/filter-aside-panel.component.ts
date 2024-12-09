@@ -48,6 +48,22 @@
 //   }
 // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// рабочая версия
+
+
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -128,3 +144,5 @@ export class FilterAsidePanelComponent {
   }
   
 }
+
+
