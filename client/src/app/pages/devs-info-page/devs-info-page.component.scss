@@ -1,0 +1,64 @@
+/* Стили для страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 169, 254, 0.2);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #00A9FE;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+
+    font-size: 1.2em;
+    line-height: 1.6;
+    
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.color{
+    color: #00A9FE;
+}
+
+/* Стили для слайдера */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Установите нужную высоту */
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .slides img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Чтобы изображения заполнили контейнер */
+  }

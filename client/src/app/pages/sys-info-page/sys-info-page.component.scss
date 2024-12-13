@@ -1,0 +1,90 @@
+// Основные переменные для цветов и шрифтов
+$primary-color: #3e8e41;
+$secondary-color: #f2f2f2;
+$text-color: #333;
+$border-color: #ccc;
+$font-family: 'Arial', sans-serif;
+$heading-font: 'Roboto', sans-serif;
+
+// Глобальные стили
+body {
+  font-family: $font-family;
+  background-color: $secondary-color;
+  color: $text-color;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: $heading-font;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Стили для основного заголовка
+.main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+// Стили для секций
+.section {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: $primary-color;
+  margin-bottom: 15px;
+  border-bottom: 2px solid $primary-color;
+  padding-bottom: 10px;
+}
+
+.subsection-title {
+  font-size: 1.5rem;
+  color: $primary-color;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+// Стили для списков шагов и функций
+.steps-list, .features-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.step, .feature-item {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.substeps {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.substeps li {
+  font-size: 0.95rem;
+  margin: 5px 0;
+}
+
+// Стили для картинок
+.image {
+  display: block;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 8px;
+}
