@@ -88,3 +88,165 @@ a {
   margin: 20px auto;
   border-radius: 8px;
 }
+
+// Стили для кнопок и ссылок
+button, .btn {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
+// Стили для навигации
+nav {
+  background-color: $primary-color;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+// Стили для формы и ввода данных
+input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+// Стили для модальных окон
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; // По умолчанию скрыто
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.modal.open {
+  display: flex;
+}
+
+// Стили для кнопок в модальных окнах
+.modal-button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+// Стили для таблиц (если они понадобятся)
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid $border-color;
+  text-align: left;
+}
+
+th {
+  background-color: $primary-color;
+  color: white;
+}
+
+// Стили для страницы корзины и заказов
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.cart-item-info {
+  display: flex;
+}
+
+.cart-item-info img {
+  max-width: 100px;
+  margin-right: 15px;
+}
+
+.cart-item-details {
+  max-width: 300px;
+}
+
+.cart-item-remove {
+  cursor: pointer;
+  color: red;
+}
+
+.cart-total {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.cart-button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
