@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalService } from '../../services/modal-service/modal.service';
+import { UserServiceService } from '../../services/user-service/user-service.service';
+import { jwtDecode } from 'jwt-decode';
 
 @Component({
   selector: 'app-modal-window-sign-in',
@@ -12,7 +14,8 @@ export class ModalWindowSignInComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private modalService: ModalService
+    private modalService: ModalService,
+    private userService: UserServiceService
   ) {}
 
   ngOnInit(): void {
@@ -38,15 +41,14 @@ export class ModalWindowSignInComponent implements OnInit {
   }
 
   get email() {
-    return this.signInForm.get('email');
+    return this.signInForm.get('email')?.value;
   }
 
   get password() {
-    return this.signInForm.get('password');
+    return this.signInForm.get('password')?.value;
   }
-  
+
   getEmailErrorMessage(): string {
-    console.log('Проверка ошибки email', this.email?.errors);
     if (this.email?.hasError('required')) {
       return 'Email обязателен.';
     }
@@ -77,8 +79,16 @@ export class ModalWindowSignInComponent implements OnInit {
 
   onSubmit(): void {
     if (this.signInForm.valid) {
-      alert('Форма успешно отправлена!');
-      // Здесь можно добавить логику отправки данных на сервер
+      this.userService.login(this.email, this.password).subscribe((res) => {
+        const userInfo = jwtDecode(res.token);
+        localStorage.setItem("user", JSON.stringify(userInfo));
+      });
+      this.modalService.closeSignInModal();
+      
+      // this.userService.checkAuth().subscribe(res => {
+      //   console.log(res);
+        
+      // });
     }
   }
 

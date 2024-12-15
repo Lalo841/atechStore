@@ -31,6 +31,7 @@ import { DevsInfoPageComponent } from './pages/devs-info-page/devs-info-page.com
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { CartProductComponent } from './components/cart-product/cart-product.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,7 @@ import { CartProductComponent } from './components/cart-product/cart-product.com
     MatInputModule,
     MatButtonModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalService } from '../../services/modal-service/modal.service';
+import { UserServiceService } from '../../services/user-service/user-service.service';
+import { jwtDecode } from 'jwt-decode';
 
 @Component({
   selector: 'app-modal-window-sign-up',
@@ -10,10 +12,7 @@ import { ModalService } from '../../services/modal-service/modal.service';
 export class ModalWindowSignUpComponent implements OnInit {
   signUpForm!: FormGroup;
 
-  constructor(
-    private fb: FormBuilder,
-    private modalService: ModalService
-  ) {}
+  constructor(private fb: FormBuilder, private modalService: ModalService, private userService: UserServiceService) {}
 
   ngOnInit(): void {
     this.signUpForm = this.fb.group({
@@ -76,8 +75,11 @@ export class ModalWindowSignUpComponent implements OnInit {
 
   onSubmit(): void {
     if (this.signUpForm.valid) {
-      alert('Регистрация успешна!');
-      console.log(this.signUpForm.value); // Логика отправки данных на сервер
+      //console.log(this.signUpForm.value); // Логика отправки данных на сервер
+      this.userService.register(this.signUpForm.value.email, this.signUpForm.value.password).subscribe(res => {
+        const userInfo = jwtDecode(res.token);
+        localStorage.setItem("user", JSON.stringify(userInfo));
+      });
       this.modalService.closeSignUpModal();
     }
   }
