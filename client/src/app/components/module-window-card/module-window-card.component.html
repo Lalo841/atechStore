@@ -1,7 +1,7 @@
-<div class="modal">
-  <div class="modal-content" (click)="closeModal()">
+<div class="modal" (click)="onBackgroundClick($event)">
+  <div class="modal-content">
     <div class="modal-content-left">
-      <img [src]="product?.img" alt="{{ product?.name }}"/>
+      <img [src]="product?.img" alt="{{ product?.name }}" />
     </div>
     <div class="modal-content-right">
       <h2>{{ product?.name }}</h2>
@@ -9,14 +9,14 @@
         {{ product?.description }}
       </p>
       <div class="product-info">
-        <p><span>Рейтинг:</span> {{product?.rating }}</p>
-        <p><span>Гарантия:</span> {{product?.warranty }} месяцев</p>
-        <p><span>Производитель:</span> {{product?.manufacturer }}</p>
+        <p><span>Рейтинг:</span> {{ product?.rating }}</p>
+        <p><span>Гарантия:</span> {{ product?.warranty }} месяцев</p>
+        <p><span>Производитель:</span> {{ product?.manufacturer }}</p>
         <div class="price-and-button">
           <p style="font-size: 32px; font-weight: bold; color: #373737;">
-            <span></span> {{ product?.price }} ₽
-          </p>    
-          <button class="modal-btn">Добавить в корзину</button>
+            {{ product?.price }} ₽
+          </p>
+          <button (click)="addBtnHandler()" class="modal-btn">Добавить в корзину</button>
         </div>
       </div>
     </div>
