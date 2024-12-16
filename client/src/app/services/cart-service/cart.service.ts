@@ -60,4 +60,3 @@ export class CartService {
     this.cartCountSubject.next(this.cartCount);
   }
 }
-
