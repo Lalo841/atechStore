@@ -1,77 +1,13 @@
-<!-- 
- <div class="card-container">
-  <div class="card-filling">
-    <h1 class="card-title">Оформление заказа</h1>
-
-    <div class="card-products">
-      <div class="head-product">
-        <h2 class="card-products-title">1. Корзина</h2>
-        <button (click)="clearCart()" class="clear-cart-btn">Очистить корзину</button>
-      </div>
-
-      <div *ngFor="let product of cartItems.keys()">
-        <app-cart-product [product]="product"></app-cart-product>
-      </div>
-    </div>
-
-    <div class="card-personal-information">
-      <h2 class="card-personal-information-title">2. Персональная информация</h2>
-      <div class="form-container">
-        <div class="input-group">
-          <div class="input-field">
-            <label for="first-name">Имя</label>
-            <input type="text" id="first-name" placeholder="Введите имя" />
-          </div>
-          <div class="input-field">
-            <label for="last-name">Фамилия</label>
-            <input type="text" id="last-name" placeholder="Введите фамилию" />
-          </div>
-        </div>
-
-        <div class="input-group">
-          <div class="input-field">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" placeholder="Введите ваш email" />
-          </div>
-          <div class="input-field">
-            <label for="phone">Телефон</label>
-            <input type="tel" id="phone" placeholder="Введите телефон" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-delivery">
-      <h2 class="card-delivery-title">3. Адрес доставки</h2>
-      <div class="input-field">
-        <label for="delivery-address">Введите адрес</label>
-        <input type="text" id="delivery-address" placeholder="Введите ваш адрес доставки" />
-      </div>
-
-      <div class="input-field">
-        <label for="order-comments">Комментарий к заказу</label>
-        <textarea id="order-comments" placeholder="Введите комментарий к заказу" rows="4"></textarea>
-      </div>
-    </div>
-
-    <div class="card-total">
-      <div class="card-total-amount">
-        <span class="label">Итоговая стоимость:</span>
-        <span class="amount">    {{totalAmount() }} ₽</span>
-      </div>
-      <button (click)="proceedToPayment()" class="btn-proceed-to-payment">Перейти к оплате</button>
-    </div>
-  </div>
-</div> -->
-
 <div class="card-container">
-  <div class="card-filling">
+  <div *ngIf="cartItems.size" class="card-filling">
     <h1 class="card-title">Оформление заказа</h1>
 
     <div class="card-products">
       <div class="head-product">
         <h2 class="card-products-title">1. Корзина</h2>
-        <button (click)="clearCart()" class="clear-cart-btn">Очистить корзину</button>
+        <button (click)="clearCart()" class="clear-cart-btn">
+          Очистить корзину
+        </button>
       </div>
 
       <div *ngFor="let product of cartItems.keys()">
@@ -80,7 +16,9 @@
     </div>
 
     <div class="card-personal-information">
-      <h2 class="card-personal-information-title">2. Персональная информация</h2>
+      <h2 class="card-personal-information-title">
+        2. Персональная информация
+      </h2>
       <div class="form-container">
         <div class="input-group">
           <div class="input-field">
@@ -110,21 +48,32 @@
       <h2 class="card-delivery-title">3. Адрес доставки</h2>
       <div class="input-field">
         <label for="delivery-address">Введите адрес</label>
-        <input type="text" id="delivery-address" placeholder="Введите ваш адрес доставки" />
+        <input
+          type="text"
+          id="delivery-address"
+          placeholder="Введите ваш адрес доставки"
+        />
       </div>
 
       <div class="input-field">
         <label for="order-comments">Комментарий к заказу</label>
-        <textarea id="order-comments" placeholder="Введите комментарий к заказу" rows="4"></textarea>
+        <textarea
+          id="order-comments"
+          placeholder="Введите комментарий к заказу"
+          rows="4"
+        ></textarea>
       </div>
     </div>
 
     <div class="card-total">
       <div class="card-total-amount">
         <span class="label">Итоговая стоимость:</span>
-        <span class="amount">    {{totalAmount() }} ₽</span>
+        <span class="amount"> {{ totalAmount() }} ₽</span>
       </div>
-      <button (click)="proceedToPayment()" class="btn-proceed-to-payment">Перейти к оплате</button>
+      <button (click)="proceedToPayment()" class="btn-proceed-to-payment">
+        Перейти к оплате
+      </button>
     </div>
   </div>
+  <div *ngIf="!cartItems.size">Корзина пуста</div>
 </div>
